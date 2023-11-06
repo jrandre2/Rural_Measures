@@ -1,0 +1,33 @@
+Variable Name,Description,Type,Range/Values,Units
+InternetType,Which of the following best describes your home's current Internet connection type?,Nominal,"DSL, Fiber, Satellite, etc.",Type of connection
+SubscribedSpeed,What download speed are you subscribed to with your current Internet Service Provider (ISP)?,Ordinal,"e.g., 0-50 Mbps, 50-100 Mbps",Mbps
+NeededSpeed,What download speed do you feel you need for your household?,Ordinal,"e.g., 0-50 Mbps, 50-100 Mbps",Mbps
+UploadSubscribed,What upload speed are you subscribed to with your current Internet Service Provider (ISP)?,Ordinal,"e.g., 0-10 Mbps, 10-20 Mbps",Mbps
+UploadNeeded,What upload speed do you feel you need for your household?,Ordinal,"e.g., 0-10 Mbps, 10-20 Mbps",Mbps
+Cost,What is your current Internet cost per month*?,Interval,Numeric value,USD
+Bundled,Is your Internet bundled with other services?,Nominal,"Yes, No",Yes/No
+BundleCost,What is the monthly cost of your bundle?,Interval,Numeric value,USD
+UsingHighestSpeed,Are you using the highest speed available in your area?,Nominal,"Yes, No",Yes/No
+HighestDownloadOffered,What is the highest download speed offered in your area?,Ordinal,"e.g., 0-50 Mbps, 50-100 Mbps",Mbps
+HighestUploadOffered,What is the highest upload speed offered in your area?,Ordinal,"e.g., 0-10 Mbps, 10-20 Mbps",Mbps
+HighestCostPackage,What is the cost of the highest-speed package available in your area?,Interval,Numeric value,USD
+RuralUrbanEqual,Do you believe rural and urban areas have equal access to high-speed Internet?,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+RuralPremium,Do you believe rural areas pay a premium for Internet?,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ImportanceLandLine,Please rate how important having a landline phone service is to you.,Ordinal,Very Important to Not Important,Likert Scale
+ImportanceTV,"Please rate how important having a TV service (cable, satellite, etc.) is to you.",Ordinal,Very Important to Not Important,Likert Scale
+ImportanceBroadband,Please rate how important having a broadband Internet service is to you.,Ordinal,Very Important to Not Important,Likert Scale
+ImportanceCellService,Please rate how important having cell service is to you.,Ordinal,Very Important to Not Important,Likert Scale
+ImportanceCellInternet,Please rate how important having Internet through your cell service provider is to you.,Ordinal,Very Important to Not Important,Likert Scale
+ISPStable,I find my Internet Service Provider (ISP) to be stable and there are rarely interruptions in service.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ISPSpeed,I am satisfied with the speed of my current Internet Service Provider (ISP).,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ISPAffordable,I find my current Internet Service Provider (ISP) to be affordable.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ISPCompetition,There is enough competition among Internet Service Providers (ISP) in my area.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ISPAdequate,My current Internet Service Provider (ISP) meets my needs.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+MyEducation,Having access to the Internet has improved my education.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+ChildrenEducation,Having access to the Internet has improved my children's education.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+TeleHealth,I can easily access telehealth services with my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+Gaming,I can play games online without any issues on my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+StartBusiness,I could start an online business with my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+VideoConference,I can video conference without any issues on my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+Secure,I feel secure doing activities such as online banking or making purchases on my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
+TradeStocks,I can trade stocks/commodities online without any issues on my current Internet connection.,Ordinal,Strongly Agree to Strongly Disagree,Likert Scale
