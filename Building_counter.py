@@ -9,10 +9,10 @@ from geopy.distance import geodesic as distance
 
 pyproj.datadir.set_data_dir("/Users/jesseandrews/Documents/Code")
 
-# read JSON file from your local directory
+# read JSON file 
 buildings = gpd.read_file("/Users/jesseandrews/Documents/Code/Nebraska.geojson")
 
-# read points from the processed survey data CSV file
+# read points from processed survey data CSV file
 points = pd.read_csv("/Users/jesseandrews/Documents/Code/processed_data.csv", header=0)
 
 # Loop through all points
@@ -22,12 +22,12 @@ for i, row in points.iterrows():
     # Create a buffer of 3 km around the current point
     buffer = point.buffer(3 / 111)  # Roughly 3 km in degrees
 
-    # Use the spatial index to find the buildings that intersect the buffer
+    # Use spatial index to find buildings that intersect the buffer
     possible_matches_index = list(buildings.sindex.intersection(buffer.bounds))
     possible_matches = buildings.iloc[possible_matches_index]
     precise_matches = possible_matches[possible_matches.intersects(buffer)]
 
-    # Now, `precise_matches` is a subset of buildings that are within 3 km of the current point
+    # Now, `precise_matches` is a subset of buildings that are within 3 km of current point
     # Calculate distances for this subset
     distances = [distance((point.y, point.x), (geom.centroid.y, geom.centroid.x)).km for geom in precise_matches.geometry]
 
@@ -38,12 +38,12 @@ for i, row in points.iterrows():
     structures_2km = sum(d <= 2 for d in distances)
     structures_3km = sum(d <= 3 for d in distances)
 
-    # Append to the results DataFrame
+    # Append to results DataFrame
     points.loc[i, "structures_250m"] = structures_250m
     points.loc[i, "structures_500m"] = structures_500m
     points.loc[i, "structures_1km"] = structures_1km
     points.loc[i, "structures_2km"] = structures_2km
     points.loc[i, "structures_3km"] = structures_3km
 
-# Save to the same CSV file
+# Save to same CSV file
 points.to_csv('/Users/jesseandrews/Documents/Code/processed_data.csv', index=False)
