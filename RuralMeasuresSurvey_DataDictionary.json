@@ -1,0 +1,84 @@
+{
+    "Age": {
+        "19 to 24": 0,
+        "25 to 34": 1,
+        "35 to 44": 2,
+        "45 to 54": 3,
+        "55 to 64": 4,
+        "65 plus": 5
+    },
+    "AnnualIncome": {
+        "less than $20,000": 0,
+        "20,000 to 34,999": 1,
+        "35,000 to 49,999": 2,
+        "50,000 to 74,999": 3,
+        "75,000 to 99,999": 4,
+        "100,000 to 149,999": 5,
+        "150,000 to 199,999": 6,
+        "more than 200,000": 7
+    },
+    "EducationLevel": {
+        "HS or GED": 0,
+        "Associate or Some College": 1,
+        "BA": 2,
+        "MA": 3,
+        "Professional or PhD": 4
+    },
+    "Sex": {
+        "Female": 0,
+        "Male": 1
+    },
+    "Property": {
+        "Residental": 0,
+        "Commercial": 1,
+        "Home Business": 2
+    },
+    "ISP": {
+        "ATC Communications": 0,
+        "Windstream": 1,
+        "Nebraska Central Telephone": 2,
+        "Cencom": 3,
+        "CenturyLink": 4,
+        "Great Plains Communications": 5,
+        "Hamilton.net": 6,
+        "NE Colorado Cellular": 7,
+        "Future Wireless": 8,
+        "Four-U Technologies": 9,
+        "Hughes Network": 10,
+        "Consolidated Telephone": 11,
+        "Allo Communications": 12,
+        "Three River Telco": 13,
+        "Action Communications": 14,
+        "CCT": 15,
+        "Hemingford Telephone": 16,
+        "Frontier": 17,
+        "Spectrum": 18,
+        "Rise Broadband": 19,
+        "Skywave Wireless": 20,
+        "Eagle Communications": 21,
+        "United Private Networks": 22,
+        "Vistabeam": 23,
+        "Diode Cable": 24,
+        "Superior iNet": 25,
+        "Glenwood Telephone": 26,
+        "Viasat": 27,
+        "USA Companies": 28,
+        "University of Nebraska Lincoln": 29,
+        "Nextlink Broadband": 30,
+        "US Cellular": 31,
+        "Great Plains": 32,
+        "Zito Media": 33,
+        "Stealth Broadband": 34,
+        "Great Plains Communcations": 35,
+        "LTD Broadband": 36,
+        "Huntel.net": 37
+    },
+    "InternetType": {
+        "dsl": 0,
+        "fiber": 1,
+        "terrestrial wireless": 2,
+        "satellite": 3,
+        "smart phone": 4,
+        "cable": 5
+    }
+}
