@@ -11,18 +11,20 @@ import urllib3
 import csv
 import pytz
 import glob
-
+from pykalman import KalmanFilter
+import numpy as np
 #VERSION 2.08. RUN CRAY-CRAY UPDATE!
 
 #Usually RP2, but disabled bt so AMA0 could be used
-#Need AMA0 as it's faster, higher throughout, less errors
+#Need AMA0 as it's faster, higher throughput, less errors
 port = "/dev/ttyAMA0"  # Raspberry Pi 2
 #port = "/dev/ttyS0"    # Raspberry Pi 3
 
-#define leds for led lights = 2
+#define LEDs for led lights = 2
 #config for crossover wiring: mosi=11 & slck=10 (straight through is mosi=10 & sclk=11)
 hatleds = apa102.APA102(num_led=2, global_brightness=20, mosi=11, sclk=10, order='rgb')
-
+# Initialize the Kalman filter
+kf = KalmanFilter(initial_state_mean=[0, 0], n_dim_obs=2)
 #REMOVE IN FUTURE VERSIONS
 def runCRAYCRAY():
     #only upgrade and reboot if speedtest is 2.1.1
@@ -230,12 +232,18 @@ def parseGPS(data):
             lon = decodeGPS(gps_string[4])
             if "W" in gps_string[5]:
                 lon = "-" + str(lon)
+        
+        # Update the Kalman filter with the new measurements
+        measurements = np.array([[float(lat), float(lon)]])
+        kf = kf.em(measurements)
+        (filtered_state_means, filtered_state_covariances) = kf.filter(measurements)
+        lat, lon = filtered_state_means[-1]
+
         gpszone = pytz.timezone('America/Chicago')
         gpstime = datetime.datetime.now(tz=gpszone)
         return [gpstime, lat, lon];
     else:
         return 0
-
 #called from parseGPS()
 #formats lat / long from NMEA to decimal
 def decodeGPS(coord):
